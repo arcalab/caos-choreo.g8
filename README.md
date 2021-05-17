@@ -23,7 +23,7 @@ it is integrated with [sbt](https://www.scala-sbt.org).
 * This will prompt a few questions [with default answers], 
 **customise** as desired:
 
-```shell
+```
 A Giter8 template for a CAOS project 
 
 name [CAOS Instance]: 
@@ -34,15 +34,33 @@ tool_path [site]:
 sbt_version [1.5.2]: 
 scala_version [2.13.5]:
 ```
-* If everything went well you will see a message similar to the following: 
+If everything went well you will see a message similar to the following: 
 
-```shell 
+``` 
 Template applied in ./<name>
 ```
-* **Initiliase** CAOS, by adding a new sbt submodule same `caos_path` specified above:
+* **Move** into the folder `./<name>`
+* **Initiliase** CAOS, by initialising git and adding a new sbt submodule in the same `caos_path` specified above:
 
 ```shell
-git submodule add https://github.com/arcalab/CAOS.git <caos_path>
+> git init 
+> git submodule add https://github.com/arcalab/CAOS.git <caos_path>
 ```
 [g8]: http://www.foundweekends.org/giter8/
 [caos]: https://github.com/arcalab/caos
+
+## Hello World 
+
+* **Run** the project by compiling it into JavaScript: 
+```shell 
+> sbt fastLinkJS
+```
+* **Open** the file `<tool_path>/index.html` in a web browser. 
+If everything went well, you should see a page similar to the following:
+
+![Hello World](img/helloworld.png)
+
+The name of the widgets will reflect the configuration of the parameter `name`.
+
+You can open/close a widget by clicking its name (e.g., `Hello World via Mermaid`) 
+
