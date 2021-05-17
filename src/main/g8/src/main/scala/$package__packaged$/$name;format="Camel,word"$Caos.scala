@@ -26,7 +26,7 @@ object $name;format="Camel,word"$Caos extends Configurator[$name;format="Camel,w
    * Example: a [[Visualize]] widget showing a Hello world Sequence Chart in Mermaid.
    */
   val widgets: Iterable[(String,Widget[$name;format="Camel,word"$])] = List(
-    "Hello World" -> Visualize(helloworld(_),id)
+    "Hello World via Mermaid" -> Visualize(helloworld(_),id)
   )
 
   /** Example of a transformation function returning a Mermaid [[View]]. */
