@@ -64,3 +64,10 @@ The name of the widgets will reflect the configuration of the parameter `name`.
 
 You can open/close a widget by clicking its name (e.g., `Hello World via Mermaid`) 
 
+# Known compatibility issues
+Since CAOS is written in Scala 3, 
+which it is still under development, there are some compatibility issues.
+
+If you selected scala 2.13.5 for the root project, 
+make sure that the CAOS scala version is set to `3.0.0-RC1`, both in the root build.sbt and in the 
+CAOS build.sbt.
