@@ -5,6 +5,7 @@ import caos.frontend.Configurator
 import caos.frontend.Configurator._
 import caos.view.View
 import caos.view._
+import caos.common.Example
 
 /** A configuration instance for the CAOS framework
  * 
@@ -19,7 +20,7 @@ object $name;format="Camel,word"$Caos extends Configurator[$name;format="Camel,w
   val parser: String=>$name;format="Camel,word"$ = str => $name;format="Camel,word"$Term
 
   /** A list of [[Example]]s to show in the tool */
-  val examples = List()
+  val examples:List[Example] = List()
 
   /** A list of [[Widget]]s to show in the tool 
    * 
